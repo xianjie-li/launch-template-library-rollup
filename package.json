@@ -4,7 +4,7 @@
   "description": "rollup library config",
   "main": "lib/index/index.js",
   "module": "esm/index/index.js",
-  "browser": "dist/index.js",
+  "browser": "dist/index/index.js",
   "scripts": {
     "dev": "rollup -c build/rollup.config.dev.js --watch --environment BUILD:development",
     "start": "npm run dev",

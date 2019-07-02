@@ -109,7 +109,7 @@ function getUmdConfig(isMini) {
       re({
         include: 'packages/**/*.(sa|sc|c)ss',
         replaces: {
-          '../aseets/': './assets/',
+          '../../aseets/': './assets/',
         },
       }),
       isMini && terser({
@@ -146,12 +146,12 @@ export function getModuleConfig(type) {
       peerDepsExternal({
         includeDependencies: true,
       }),
-      re({
-        include: 'packages/**/*.(sa|sc|c)ss',
-        replaces: {
-          $aseets$: '../assets',
-        },
-      }),
+      // re({
+      //   include: 'packages/**/*.(sa|sc|c)ss',
+      //   replaces: {
+      //     $aseets$: '../assets',
+      //   },
+      // }),
       postcss({
         plugins: [autoprefixer, cssnano],
         extract: path.resolve(__dirname, `../${type === 'cjs' ? 'lib' : 'esm'}/index/style/index.css`),
