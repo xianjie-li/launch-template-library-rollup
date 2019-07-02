@@ -1,0 +1,51 @@
+{
+  "name": "rollop-template",
+  "version": "0.0.1",
+  "description": "rollup library config",
+  "main": "lib/index/index.js",
+  "module": "esm/index/index.js",
+  "browser": "dist/index.js",
+  "scripts": {
+    "dev": "rollup -c build/rollup.config.dev.js --watch --environment BUILD:development",
+    "start": "npm run dev",
+    "build": "rollup -c build/rollup.config.js --environment BUILD:production",
+    "build:entry": "node ./script/generateEntrys.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "chokidar": "^3.0.1",
+    "cssnano": "^4.1.10",
+    "glob": "^7.1.4",
+    "node-fs-extra": "^0.8.2",
+    "node-sass": "^4.12.0",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.16.3",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-copy": "^3.0.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-notify": "^1.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-re": "^1.0.7",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-visualizer": "^2.4.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "@lxjx/utils": "^1.0.2",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  }
+}
